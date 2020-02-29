@@ -13,14 +13,11 @@ class Menu:
         self.notebook = Notebook()
 
     def __str__(self):
-
-        return  """
-Print search to Search specific notes
-Print add to add new note
-Print update to modify
-Print show to show all notes
-Print quit to exit
-"""
+        return """Print "add" to add new note
+Print "update" to modify note
+Print "search" to Search specific notes
+Print "show" to show all notes
+Print "quit" to exit"""
 
     def main(self):
         """
@@ -59,7 +56,7 @@ Print quit to exit
         memo = input('Enter a memo: ')
         tags = input('Enter a tags: ')
         self.notebook.new_note(memo, tags)
-
+        print(self.notebook.notes[-1])
     def update(self):
         """
         Update note
@@ -80,6 +77,7 @@ Print quit to exit
         """
         for note in self.notebook.notes:
             print(note)
+
 
 if __name__ == '__main__':
     menu = Menu()

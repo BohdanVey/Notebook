@@ -63,7 +63,7 @@ class Notebook:
         Modify tags in given note
         """
         note = list(filter(lambda note: note.id == note_id, self.notes))[0]
-        note.tags = tags
+        note.tags = [tags]
 
 
 if __name__ == '__main__':
