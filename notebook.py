@@ -10,7 +10,7 @@ class Note:
 
     def __init__(self, memo, tags):
         self.memo = memo
-        self.tags = tags
+        self.tags = [tags]
         self.creation_data = str(datetime.datetime.now())
         print(self.creation_data)
         global last_id
