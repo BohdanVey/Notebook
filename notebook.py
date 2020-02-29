@@ -28,7 +28,8 @@ class Note:
         return search_filter in self.memo or search_filter in self.tags
 
     def __str__(self):
-        return 'ID: {}, Tags: {}:\n{}\n{}'.format(str(self.id), ', '.join(self.tags),self.creation_data, self.memo)
+        return 'ID: {}, Tags: {}:\n{}\n{}'.format(
+            str(self.id), ', '.join(self.tags), self.creation_data, self.memo)
 
 
 class Notebook:
@@ -67,4 +68,4 @@ class Notebook:
 
 
 if __name__ == '__main__':
-    print(Note('my new note',['1','2','3']))
+    print(Note('my new note', ['1', '2', '3']))
