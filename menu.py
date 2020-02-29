@@ -57,6 +57,7 @@ Print "quit" to exit"""
         tags = input('Enter a tags: ')
         self.notebook.new_note(memo, tags)
         print(self.notebook.notes[-1])
+
     def update(self):
         """
         Update note
