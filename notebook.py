@@ -9,6 +9,11 @@ class Note:
     """
 
     def __init__(self, memo, tags):
+        """
+        Initialize note
+        memo: str
+        tags: list
+        """
         self.memo = memo
         self.tags = [tags]
         self.creation_data = str(datetime.datetime.now())
@@ -28,6 +33,9 @@ class Note:
         return search_filter in self.memo or search_filter in self.tags
 
     def __str__(self):
+        """
+        Returns Note in good representation for user
+        """
         return 'ID: {}, Tags: {}:\n{}\n{}'.format(
             str(self.id), ', '.join(self.tags), self.creation_data, self.memo)
 
@@ -36,12 +44,15 @@ class Notebook:
     def __init__(self):
         """
         Create a notebook
+        notes: list of Note
         """
         self.notes = []
 
     def search(self, search_filter):
-        '''Find all notes that match the given filter
-        string.'''
+        """
+        Find all notes that match the given filter
+        string.
+        """
 
         return list(filter(lambda note: note.match(search_filter), self.notes))
 
