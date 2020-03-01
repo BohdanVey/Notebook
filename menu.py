@@ -54,7 +54,8 @@ Print "quit" to exit"""
         Add new note to notebook
         """
         memo = input('Enter a memo: ')
-        tags = input('Enter a tags: ')
+        text = 'Enter a tags splited by spaces: '
+        tags = input(text).split(' ')
         self.notebook.new_note(memo, tags)
         print(self.notebook.notes[-1])
 
@@ -69,7 +70,8 @@ Print "quit" to exit"""
             memo = input('Enter a memo: ')
             self.notebook.modify_memo(id, memo)
         else:
-            tags = input('Enter a tags: ')
+            text = 'Enter a tags splited by spaces: '
+            tags = input(text).split(' ')
             self.notebook.modify_tags(id, tags)
 
     def show(self):

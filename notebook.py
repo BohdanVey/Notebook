@@ -15,7 +15,7 @@ class Note:
         tags: list
         """
         self.memo = memo
-        self.tags = [tags]
+        self.tags = tags
         self.creation_data = str(datetime.datetime.now())
         print(self.creation_data)
         global last_id
@@ -29,7 +29,6 @@ class Note:
         else False
         Search is case sensitive and matches both text and tags.
         """
-
         return search_filter in self.memo or search_filter in self.tags
 
     def __str__(self):
@@ -75,7 +74,7 @@ class Notebook:
         Modify tags in given note
         """
         note = list(filter(lambda note: note.id == note_id, self.notes))[0]
-        note.tags = [tags]
+        note.tags = tags
 
 
 if __name__ == '__main__':
