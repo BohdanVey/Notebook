@@ -8,7 +8,7 @@ class Note:
     Save inforation about Notes in our notebook
     """
 
-    def __init__(self, memo, tags):
+    def __init__(self, memo, tags = ''):
         """
         Initialize note
         memo: str
@@ -36,7 +36,7 @@ class Note:
         Returns Note in good representation for user
         """
         return 'ID: {}, Tags: {}:\n{}\n{}'.format(
-            str(self.id), ', '.join(self.tags), self.creation_data, self.memo)
+            str(self.id), self.tags, self.creation_data, self.memo)
 
 
 class Notebook:
